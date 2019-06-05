@@ -1,0 +1,50 @@
+<!-- Card -->
+<div class="d-none d-md-none d-lg-block">
+  <div class="row">
+    <mat-card class="mx-auto my-2 text-center" style="width: 20rem;" *ngFor="let item of filteredData | sort : ['name']; let i = index"
+      id={{item.key}}>
+
+      <button mat-button style="border: 0px solid #ffffff; border-radius: 50%; width: 85px; height: 85px;" [routerLink]="['/details',item.key]">
+        <img mat-card-avatar class="mat-elevation-z8" [src]="item.imageUrl!=null ? item.imageUrl : '../assets/img/ud_launcher-min.png'"
+          style="margin-left:-14px; width:85px; height: 85px;"></button>
+
+
+      <mat-card-content class="mt-3">
+        <h4>{{ item.name }}</h4>
+        <p>{{ item.description }}</p>
+        <p>{{ item.discount }}</p>
+
+        <mat-icon>place</mat-icon>
+        <p>{{ getDistance(item.latitude, item.longitude) | number:'0.1-2' }} km</p>
+
+        <!-- <button mat-button class="btn-du-color mt-2 mat-elevation-z8" [routerLink]="['/details',item.key]" (click)="viewDetails(item.key)">View</button> -->
+        <button mat-button class="btn-du-color mt-2 mat-elevation-z8" (click)="viewDetails(item.key)">View</button>
+      </mat-card-content>
+
+    </mat-card>
+  </div>
+</div>
+
+<!-- List  -->
+<mat-list class="d-md-block d-lg-none">
+  <mat-card class="mb-1 list-group-item-action" *ngFor="let item of filteredData | sort : ['name']; let i = index"
+    (click)="viewDetails(item.key)">
+    <div class="d-flex">
+      <button mat-button style="border: 0px solid #ffffff; border-radius: 50%; width: 85px; height: 85px;" (click)="viewDetails(item.key)">
+        <img mat-card-avatar class="mat-elevation-z8" [src]="item.imageUrl!=null ? item.imageUrl : '../assets/img/ud_launcher-min.png'"
+          style="margin-left:-14px; width:85px; height: 85px;"></button>
+      <div class="ml-4">
+        <span class="font-weight-bold">{{ item.name }}</span><br>
+        <p class="font-weight-normal">{{ item.description }}</p>
+        <span class="font-weight-normal">{{ item.discount }}</span><br>
+        <span><i class="material-icons" style="font-size: 0.8em;">place</i> {{ getDistance(item.latitude,
+          item.longitude) | number:'0.1-2' }} km</span>
+      </div>
+      <!-- <div class="ml-auto">
+          <div class="d-none d-md-block">4.7 / 5
+            <i class="fa fa-star amber-text"></i>
+          </div>          
+        </div> -->
+    </div>
+  </mat-card>
+</mat-list>

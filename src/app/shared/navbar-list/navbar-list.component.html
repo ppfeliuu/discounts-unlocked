@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-lg sticky-top du-color">
+
+  <button mat-icon-button [routerLink]="['/home']">
+      <mat-icon>arrow_back</mat-icon>
+  </button>    
+
+  <div class="text-center">
+      {{ category | titlecase }}
+  </div>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+      aria-expanded="true" aria-label="Toggle navigation">
+      <i class="material-icons" style="color:white">search</i>
+  </button>  
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+          <mat-form-field id="searchBar" floatLabel="never">
+              <mat-label>Search</mat-label>
+              <input matInput type="text" (keyup)="searchDiscount(search.value)" #search/>
+              <button mat-button *ngIf="search" matSuffix mat-icon-button (click)="search.value='';searchDiscount(search.value)">
+                  <mat-icon>close</mat-icon>
+              </button>
+          </mat-form-field>
+      </ul>
+  </div>  
+</nav>

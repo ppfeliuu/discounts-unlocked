@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="col-lg-4 mx-auto text-center mt-5">
+    <img src="assets/img/ud_launcher-min.png" class="img-fluid" alt="">
+  </div>
+  <div class="col-8 col-md-6 col-lg-4 mx-auto">
+    <form>
+      <p class="h5 mb-1 text-center">DISCOUNTS UNLOCKED</p>      
+      <p class="mb-4 text-center">v.2.0</p>      
+      <mat-form-field class="w-100" id="loginIn">
+        <input matInput placeholder="Enter your member ID" [value]="keysMemberId" #km class="text-center">
+      </mat-form-field>
+      <div class="text-center">
+        <button #bLogin mat-raised-button class="btn-du-color" [disabled]="!km.value" (click)="login(km.value)">Login</button>
+      </div>
+      <div class="mt-5" *ngIf="loading">
+        <mat-spinner class="mx-auto" [diameter]=50>
+        </mat-spinner>
+      </div>
+    </form>
+  </div>  
+</div>

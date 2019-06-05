@@ -1,0 +1,44 @@
+<app-navbar></app-navbar>
+<div class="container">
+
+  <div class="row justify-content-around mt-3">
+    <h1 class="d-none d-md-none d-lg-block">What do you prefer?</h1>
+  </div>
+  <div class="row mt-lg-4 mb-3">
+    <!-- Card -->
+
+    <div class="col-lg-6">
+      <mat-card class="mb-1 py-5" style="background-image: url('./assets/img/restaurant_bg-min.jpg');background-size:cover;">
+        <mat-card-content class="text-center">
+          <!-- Content -->
+          <img class="mh-100" src="./assets/img/menu_restaurants_icon-min.png" alt="Restaurants">
+          <mat-card-actions>
+            <button mat-button class="mat-elevation-z8 btn-du-color" [routerLink]="['/discounts','restaurants']">Restaurants</button>
+          </mat-card-actions>
+          <!-- Content -->
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <!-- Card -->
+
+    <!-- Card -->
+    <div class="col-lg-6">
+      <mat-card class="py-5" style="background-image: url('./assets/img/shopping_bg-min.jpg');background-size:cover;">
+        <mat-card-content class="text-center">
+          <!-- Content -->
+          <img class="mh-100" src="./assets/img/menu_discounts_icon-min.png" alt="Shops">
+          <mat-card-actions>
+            <button mat-button class="mat-elevation-z8 btn-du-color" [routerLink]="['/discounts','shopping']">Shopping</button>
+          </mat-card-actions>
+          <!-- Content -->
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+    <!-- Card -->
+  </div>
+
+  <div class="text-center mt-5 d-none d-md-none d-lg-block">
+    <h2>Discounts Unlocked - The best discounts for you in Tenerife</h2>
+  </div>
+</div>

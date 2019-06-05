@@ -1,0 +1,7 @@
+<agm-map [latitude]='latitude' [longitude]='longitude' [zoom]="16">
+  <agm-marker [latitude]="latitude" [longitude]="longitude">
+      <agm-info-window>
+          <a href="{{mapLink}}" target="_blank">{{item?.name}}</a>
+          </agm-info-window>
+  </agm-marker>
+</agm-map>

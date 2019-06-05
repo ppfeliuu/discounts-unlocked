@@ -1,0 +1,43 @@
+{
+  "name": "Discounts Unlocked - The best discounts for you in Tenerife",
+  "dir": "ltr",
+  "short_name": "Discounts",
+  "theme_color": "#560027",
+  "background_color": "#c1c1c1",
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "/",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "assets/icons/icon_72-min.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icons/icon_96-min.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },    
+    {
+      "src": "assets/icons/icon_144-min.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icons/icon_159-min.png",
+      "sizes": "159x159",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icons/icon_192-min.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },    
+    {
+      "src": "assets/icons/icon_512-min.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

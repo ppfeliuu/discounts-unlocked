@@ -1,1 +1,141 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url('assets/fonts/MaterialIcons-Regular.eot'); /* For IE6-8 */
+    src: local('Material Icons'),
+      local('MaterialIcons-Regular'),
+      url('assets/fonts/MaterialIcons-Regular.woff2') format('woff2'),
+      url('assets/fonts/MaterialIcons-Regular.woff') format('woff'),
+      url('assets/fonts/MaterialIcons-Regular.ttf') format('truetype');
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+  
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+  
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+  }
+
+
+body {
+    background: #E1E2E1 !important;
+    font-family: 'Lato', sans-serif !important; 
+}
+.du-color-dark {
+    background: #560027;
+    color: #ffffff; 
+}
+
+.du-color-light {
+    background: #bc477b;
+}
+
+.du-color {
+    background: #880e4f;    
+}
+
+.du-color {
+    color: #ffffff;    
+}
+
+.btn-du-color {
+    background: #880e4f;    
+}
+
+.btn-du-color span {
+    color: white;
+}
+
+button:focus {
+    outline: 0px !important;
+    outline: 0px auto -webkit-focus-ring-color !important;
+}
+
+.cdk-overlay-container {
+    z-index: 9999 !important;
+}
+
+.cdk-overlay-pane {
+    max-width: 1200px !important;
+}
+
+#searchBar .mat-form-field-underline {
+    background-color: white !important;
+    opacity: 0.8 !important;
+}
+
+#searchBar label {
+    color: white !important;
+    opacity: 0.8 !important;
+}
+
+#searchBar2 .mat-input-underline.mat-form-field-underline {
+    background-color: black !important;
+    opacity: 0.8 !important;
+}
+
+#searchBar2 .mat-input-underline.mat-form-field-underline span {
+    background-color: black !important;
+    opacity: 1 !important;
+}
+
+#searchBar2 label {
+    color: black !important;
+    opacity: 0.8 !important;
+}
+
+#searchBar2 .mat-input-element {
+    caret-color: black !important;
+    opacity: 0.8 !important;
+}
+
+.splash {
+    opacity:0;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    color: #272c33;
+    padding-top: 25vh;
+    text-align: center;
+    z-index: -1;      
+  }
+
+  app-root:empty+.splash {
+    opacity: 1;
+    z-index: 100;
+  }
+
+  #loginIn label {
+      color: #000000 !important;
+      text-align: center !important;
+  }
+
+  .btn-du-color:disabled {
+      background: #8d8d8d !important;
+  }
+
+  .btn-phone:hover {
+      text-decoration: none !important;
+  }

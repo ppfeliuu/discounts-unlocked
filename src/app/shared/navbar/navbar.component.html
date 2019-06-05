@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand-lg du-color">
+  <img src="assets/img/ud_launcher-min.png" style="width: 65.5px;" class="img-fluid" alt="Discount Unlocked">
+  <span>Discounts Unlocked</span>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <!-- <i class="material-icons" style="color:white">menu</i> -->
+    <img src="../assets/icons/ic_menu_white_24px.svg" alt="">
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mx-auto">
+      <!-- <button type="button" class="mat-elevation-z8 btn btn-outline-light mx-1" [routerLink]="['/discounts','restaurants']">Restaurants</button>
+      <button type="button" class="mat-elevation-z8 btn btn-outline-light mx-1" [routerLink]="['/discounts','shopping']">Shopping</button> -->      
+      <button class="border-bottom border-light m-1" mat-button [routerLink]="['/discounts','restaurants']">Restaurants</button>
+      <button class="border-bottom border-light m-1" mat-button [routerLink]="['/discounts','shopping']">Shopping</button>
+    </ul>
+    <ul class="navbar-nav">
+      <button class="border-bottom border-light m-1" mat-button [matMenuTriggerFor]="menu">
+        <mat-icon>account_circle</mat-icon> {{ mId | uppercase }}
+      </button>
+      <!-- <button type="button" [matMenuTriggerFor]="menu" class="mat-elevation-z8 btn btn-outline-light"><mat-icon>account_circle</mat-icon> {{ mId | uppercase }}</button> -->
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="logout()" [routerLink]="['/'] ">
+          <mat-icon>exit_to_app</mat-icon>
+          Logout
+        </button>
+
+        <!-- <button mat-menu-item (click)="subscribe()">
+          <mat-icon>sms</mat-icon>
+          Subscribe Notifications
+        </button>
+
+        <button mat-menu-item (click)="unSubscribeMsg()">
+          <mat-icon>sms</mat-icon>
+          UnSubscribe Notifications
+        </button> -->
+      </mat-menu>
+    </ul>
+  </div>
+</nav>
